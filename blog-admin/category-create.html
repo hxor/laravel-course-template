@@ -93,54 +93,30 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
+          <a href="#">Category</a>
         </li>
-        <li class="breadcrumb-item active">My Dashboard</li>
+        <li class="breadcrumb-item active">Add New</li>
       </ol>
       <!-- Icon Cards-->
       <div class="row">
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-primary o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-comments"></i>
-              </div>
-              <div class="mr-5">26 New Comments!</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white bg-warning o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-list"></i>
-              </div>
-              <div class="mr-5">11 Posts!</div>
-            </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
-              <span class="float-right">
-                <i class="fa fa-angle-right"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="row">
         <div class="col-md-12">
           <div class="card">
-            <div class="card-header">
-              Featured
+            <form>
+            <div class="card-header text-white bg-primary">
+              Add New Category
             </div>
             <div class="card-body">
-              <h5 class="card-title">Welcome, Admin</h5>
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" name="title" class="form-control" id="title">
+              </div>
             </div>
+            <div class="card-footer bg-transparent">
+              <button class="btn btn-primary pull-right" type="submit">
+                Submit
+              </button>
+            </div>
+            </form>
           </div>
         </div>
       </div>
