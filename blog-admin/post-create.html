@@ -178,7 +178,18 @@
             <div class="card-body">
               <form>
                 <div class="form-group">
-                  <input type="file" name="image">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                          <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary text-white">
+                            <i class="fa fa-cloud-upload"></i> Choose
+                          </a>
+                        </span>
+                        <input type="text" name="avatar" class="form-control" id="avatar" readonly="readonly">
+                    </div>
+                    <!-- if -->
+                        <!-- <img src="#" id="holder" style="margin-top:15px;max-height:254px;max-width: 152px;"> -->
+                    <!-- endif -->
+                    <img id="holder" style="margin-top:15px;max-height:254px;max-width: 152px;">
                 </div>
               </form>
             </div>
