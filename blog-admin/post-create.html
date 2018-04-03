@@ -8,6 +8,24 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>Larablog - Admin Template</title>
+  <!-- TinyMCE -->
+  <script src='vendor/tinymce/tinymce.min.js'></script>
+  <script>
+	  tinymce.init({
+	    selector: '#mytextarea',
+	    height: 500,
+		theme: 'modern',
+		plugins: 'print preview fullpage  searchreplace autolink directionality  visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount   imagetools    contextmenu colorpicker textpattern help',
+		toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+		image_advtab: true,
+		content_css: [
+			'//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+			'//www.tinymce.com/css/codepen.min.css'
+		]
+	  });
+  </script>
+  <!-- DateTime Picker -->
+  <link href="vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
@@ -117,7 +135,7 @@
                 </div>
                 <div class="form-group">
                   <label>Content</label>
-                  <textarea name="content" class="form-control" id="content"></textarea>
+                  <textarea name="content" class="form-control" id="mytextarea"></textarea>
                 </div>
               </form>
             </div>
@@ -132,11 +150,7 @@
               <form>
                 <div class="form-group">
                   <label for="date">Date</label>
-                  <input type="date" name="date" class="form-control" id="date">
-                </div>
-                <div class="form-group">
-                  <label for="date">Date</label>
-                  <input type="date" name="date" class="form-control" id="date">
+                  <input type="text" name="date" class="form-control" id="date" readonly="">
                 </div>
                 <div class="form-group">
                   <label>Status</label>
@@ -231,10 +245,19 @@
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DateTime Picker -->
+    <script src="vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
+
+    <script type="text/javascript">
+	    $("#date").datetimepicker({
+	    	format: 'yyyy-mm-dd hh:ii:00',
+	    	autoclose: true
+	    });
+	</script>            
   </div>
 </body>
 
